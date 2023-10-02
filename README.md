@@ -11,13 +11,16 @@ since container is an isolated env for running application , we can create a vir
 docker uses a client to server architecture , client talks to server using a restful api. and as we said containers run on the host op(operating system) so the op present containers just like  anormal proccess . every op has it's own native conatainer like linux and Windows , but in Mac you gotta use a lightweight linux Vm and a linux container
 ![Architecture-of-Docker](https://github.com/kslik9/Inception/assets/115497057/81affb9c-b573-46d9-8aa1-e94be81b6d75)
 # Terminologies in docker
-<pre>
+
 **docker image** : a file used to execute code in a docker container and acts as a set of instruction to create it
+
 **docker container** : is the runtime phase of docker image, it stors all the depencies the program needs 
+
 **docker file** : it's like a source code it contains the necessary command to excute and assemble the docker image
+
 **docker engine** : its the underlying technology that handles the tasks involving builduing container based application you can represent it as a Hypervisor on Vm
+
 **docker hub** : the official online repository where you can pull the images are available for use it's like github for docker images
-</pre>
 # Installing and creating linux Vm
 if you have a mac , you need a vm with lunix op as we said before , so you gotta get one of the Hypervisors "i choosed Virtualbox" and create a new machine . after installing [ubuntu server](https://ubuntu.com/download/server) you have to lunch your Vm after the configuration "choose the Ram Rom you want , i choosed 4GB and 30GB" then download a graphical interface "lightdm or gdm is recommended" now your Vm is ready for docker !
 # Download docker 
