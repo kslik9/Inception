@@ -20,14 +20,16 @@ dockerize an App means we make small changes to the app so it can be run by dock
 like git and github docker has its own dockerhub , dockerhub its a collaboration and storage for docker image that when a docker image is uploaded to dockerhub anyone could put the image in any machine running on docker and have the same isolated env and the same results as we have in our development machine 
 # Your first hello world docker program
 if you are like me using a Mac , you have to Use a Vm for docker . **first** you gonna go to your Desktop create a new folder and inside it create a small hello world sourcecode with the language you like, for me i choosed C
+<pre>
 ``#include <stdio.h>
 int main()
 {
 	printf("ana tntesti");
- }``
+}``
 and on the same folder create a file called Dockerfile with a capital D . and write a basic elements on it , for C i used 
 ``FROM gcc:4.9   //From means the image that ur container will build upon it , and here i used gcc:4.9 "an official image from docker fo c programs"
 COPY ./ /usr/src/myapp  //Copy my directories and files from my host machine into the docker image
 WORKDIR /usr/src/myapp //specifies the working directory 
 RUN gcc -o myapp k.c //the run command run the program inside your container here gcc my file.c
 CMD ["./myapp"]     //and lastely here open the ./myapp program and excute it inside your image``
+</pre>
