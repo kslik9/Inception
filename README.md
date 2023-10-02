@@ -46,3 +46,8 @@ WORKDIR /usr/src/myapp //specifies the working directory
 RUN gcc -o myapp k.c //the run command run the program inside your container here gcc my file.c
 CMD ["./myapp"]     //and lastely here open the ./myapp program and excute it inside your image``
 </pre>
+# Creating Nginx container
+let's pretend you don't know anything about web , webservers etc. when you visit a website not like a programmer or an IT lover just a normal person , your request travel first to a webserver and it's job it to look for the requested resource and send it back as a response . theres a lot of webservers but nginx is one of the most popular once you can find it in twitch shopify tinder and more ! , why ? because of it can ahndle more than 10k simultaneous event and its security and caching for better performance .
+
+**nginx must be configured using TLS 1.2 or 1.3 only .**
+Tls is a short word for Transport layer security , it is a cryptographic protocol designed to provide network communication security and its used on apps like the IM (instant messaging) , VoIP and more to secure communication between server and client 
