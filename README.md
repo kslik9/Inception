@@ -26,7 +26,9 @@ int main()
 {
 	printf("ana tntesti");
 }``
+</pre>
 and on the same folder create a file called Dockerfile with a capital D . and write a basic elements on it , for C i used 
+<pre>
 ``FROM gcc:4.9   //From means the image that ur container will build upon it , and here i used gcc:4.9 "an official image from docker fo c programs"
 COPY ./ /usr/src/myapp  //Copy my directories and files from my host machine into the docker image
 WORKDIR /usr/src/myapp //specifies the working directory 
