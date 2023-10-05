@@ -54,3 +54,6 @@ an open-source lightwight fast and high-performance webserv , it serves for many
 
 **nginx must be configured using TLS 1.2 or 1.3 only .**
 Tls is a short word for Transport layer security , it is a cryptographic protocol designed to provide network communication security and its used on apps like the IM (instant messaging) , VoIP and more to secure communication between server and client 
+
+after we install nginx through apt install nginx , we need to create the TLS/SSL certificate , ``because theres a lot of commands and explanations you have to enter here and follow this [tutorial](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-on-centos-7)
+
