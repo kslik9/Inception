@@ -39,6 +39,8 @@ dockerize an App means we make small changes to the app so it can be run by dock
 **docker stop <con_id>** : to stop a container
 
 **sometimes docker stop wont work and show you an error : cannot stop container** : it's a problem happens on the AppArmor , you can use the command ``sudo aa-remove-unknown`` to fix that
+
+**daemon** : in short term the deamon manage the docker objects such imags containers and more , and deamon off runs the container in foreground , if u delete it and run it on the background will cause the container to exit immediately
 # The beauty of docker 
 like git and github docker has its own dockerhub , dockerhub its a collaboration and storage for docker image that when a docker image is uploaded to dockerhub anyone could put the image in any machine running on docker and have the same isolated env and the same results as we have in our development machine 
 # Your first hello world docker program
