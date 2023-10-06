@@ -27,6 +27,18 @@ if you have a mac , you need a vm with lunix op as we said before , so you gotta
 first check if you have docker installed already , you can check with docker version , if its not installed you can get it from [here](https://docs.docker.com/engine/install/) , check again with ``docker version`` command and it need to show you the client and server version if any error occured you can search to fix it and run ``docker run hello-world`` to make sure everything is working as excpected 
 # dockerize your App
 dockerize an App means we make small changes to the app so it can be run by docker , by add a docker file that includes instruction that docker uses to package up the app into an image , this image contains every dependency our app needs to work , once we have an image we can start a container using that image using it's own file system provided by the image
+# Some docker commands you may need
+**docker build -t <tag_name> </directory you wanna use>** :  used to create a Docker image from the contents of a specified directory.
+
+**docker run -d -p 80:80 <image_name>** : -d for detached -p for the port that other machins can connect, this command is used to run a container
+
+**docker ps** : show ongoing containers
+
+**docker ps -a** :  used to list all containers on your system, including both running and stopped containers
+
+**docker stop <con_id>** : to stop a container
+
+**sometimes docker stop wont work and show you an error : cannot stop container ** : it's a problem happens on the AppArmor , you can use the command ``sudo aa-remove-unknown`` to fix that
 # The beauty of docker 
 like git and github docker has its own dockerhub , dockerhub its a collaboration and storage for docker image that when a docker image is uploaded to dockerhub anyone could put the image in any machine running on docker and have the same isolated env and the same results as we have in our development machine 
 # Your first hello world docker program
