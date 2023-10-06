@@ -77,3 +77,8 @@ if we dive deep into teh TLS , we gonna need to know the TLS handshake , short a
 **the DHparam.pem file**
 to config a TLS you have to generate DHparam file , the DHparam is a mathematical method of seurely exchanging cryptographic keys , how it works ? every part gives its different DH key and when it's combined they result in a different calculation on each side , with results which will be equal
 
+**the crt file**
+a .crt file contains SSL/TLS certificate its the public key that includes information about the entity who owns the certificate 
+
+**the key file**
+a .key file contains the private key which corresponds to the public key in the certificate , it keept secret to crypt and decrypt data and for proving the server identity 
