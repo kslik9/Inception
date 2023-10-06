@@ -12,7 +12,7 @@ docker uses a client to server architecture , client talks to server using a res
 ![Architecture-of-Docker](https://github.com/kslik9/Inception/assets/115497057/81affb9c-b573-46d9-8aa1-e94be81b6d75)
 # Terminologies in docker
 
-**docker image** : a file used to execute code in a docker container and acts as a set of instruction to create it
+**docker image** : acts as a set of instruction to create docker container 
 
 **docker container** : is the runtime phase of docker image, it stors all the depencies the program needs 
 
