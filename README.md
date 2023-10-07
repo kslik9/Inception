@@ -69,7 +69,7 @@ an open-source lightwight fast and high-performance webserv , it serves for many
 **nginx must be configured using TLS 1.2 or 1.3 only .**
 Tls is a short word for Transport layer security , it is a cryptographic protocol designed to provide network communication security and its used on apps like the IM (instant messaging) , VoIP and more to secure communication between server and client 
 
-after we install nginx through apt install nginx , we need to create the TLS/SSL certificate , ``because theres a lot of commands and explanations you have to enter here and follow this [tutorial](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-on-centos-7)
+after we install nginx through apt install nginx , we need to create the TLS/SSL certificate , ``because theres a lot of commands and explanations you have to enter here and follow this`` [tutorial](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-on-centos-7)
 
 **TLS handshake**
 if we dive deep into teh TLS , we gonna need to know the TLS handshake , short answer the handshake is when a user navigates a website over HTTPS and the browser start connecting to the origin server and also other HTTPS connection like API calls and DNS over HTTPS queries , During the course of a TLS handshake the client and server will specify which version of TLS they will use, like here we are usign TLSv1.2 or TLSv1.3 and verify each other and agree on session keys , this just a very short explaination from what i understand you can search for more it is fun !
