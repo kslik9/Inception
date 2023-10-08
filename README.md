@@ -85,3 +85,10 @@ a .crt file contains SSL/TLS certificate its the public key that includes inform
 
 **the key file**
 a .key file contains the private key which corresponds to the public key in the certificate , it keept secret to crypt and decrypt data and for proving the server identity 
+
+# MariaDB Container
+**MariaDb** is a relational database managment system and its a fork from MySQL in 2009 , it intends to remain open source and free to use . 
+
+**installing MariaDB in linux**
+To keep this documentation concise, I recommend incorporating that [article](https://www.cherryservers.com/blog/how-to-install-and-start-using-mariadb-on-ubuntu-20-04) which includes comprehensive steps and explanations. Additionally, consider conducting further research to gather additional information.
+
