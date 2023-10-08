@@ -21,6 +21,9 @@ docker uses a client to server architecture , client talks to server using a res
 **docker engine** : its the underlying technology that handles the tasks involving builduing container based application you can represent it as a Hypervisor on Vm
 
 **docker hub** : the official online repository where you can pull the images are available for use it's like github for docker images
+# Docker Container Lifecycle Management
+each docker container has different stages, some of states are : **Created running paused stopped and deleted**
+![Capture-5](https://github.com/kslik9/Inception/assets/115497057/5f6c1b23-c82a-4ba2-b768-99cf2af863d3)
 # Installing and creating linux Vm
 if you have a mac , you need a vm with lunix op as we said before , so you gotta get one of the Hypervisors "i choosed Virtualbox" and create a new machine . after installing [ubuntu server](https://ubuntu.com/download/server) you have to lunch your Vm after the configuration "choose the Ram Rom you want , i choosed 4GB and 30GB" then download a graphical interface "lightdm or gdm is recommended" now your Vm is ready for docker !
 # Download docker 
