@@ -97,4 +97,11 @@ to make our database good and doesnt need uphead configuration to start working 
 the script has to setup some mandatory things which is the next.
 firstly it has ti setup the database root password and delete anonymous users , remove the test database , flush the privileges tables and for some fun create small table and insert some object to it . for the setup this [tutorial](https://bertvv.github.io/notes-to-self/2015/11/16/automating-mysql_secure_installation/) explain everything in details i highly recommend it .
 
-secondly for the table adn insertting on it 
+secondly for the table adn insertting on it you have to create a **database**(a collection of tables which stores different sets of structred data) at first by Using ``'CREATE DATABASE <name>'`` , second enter into the database with the ``'USE <name>'`` . since you are inside the database you have to create a **table**(you can understand it as adouble array where is has collumns and rows of data) inside of it now . to do a simple example ``CREATE TABLE <name_fo_database>(<name_of_var> <type_of_var> );``
+example : 
+``CREATE TABLE ksalka(
+    lvl INT
+);``
+
+and then insert value with ``INSERT INTO <name_databse>(<namevar>) and then inter VALUES (<values>);``
+now you can see that by **SELECT <name_var> FROM <name_database>;**
