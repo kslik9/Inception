@@ -114,3 +114,24 @@ you did it ? good job !
 now let's make it more automatised with a bash script , you have to make a bash script that enter the sql script into mariadb 
 
 # WordPress + php-fpm container
+**Wordpress** is a content management system that allows you to host and build websites.
+**php-fpm** is a primary php FastCGI (the interface that interacte programs with a web server) its evry useful for heavy-loaded websites
+
+we will try to lunch our wordpress page without using a webserver , first we will install php-fpm with ``sudo apt-get install php-fpm`` 
+
+then download wordpress
+``sudo wget https://wordpress.org/latest.tar.gz
+sudo tar -xzvf latest.tar.gz -C /var/www/html``
+ then  we will run a php build-in server with
+``cd /var/www/html/wordpress
+php -S 0.0.0.0:8080``
+now the wordpress home page is on your localhost:8080 , i will show you an error that database should be connected with the wordpress page , to fix that you have to cut off your built-in server and create a wp confign file and put it the infos about your database , like we did earlier , we used mariadb . we gonna do 
+``mv wp-config-sample.php wp-config.php //to create the config file ``
+and we will fill those 
+``define('DB_NAME', 'your_db_name');
+define('DB_USER', 'your_db_user');
+define('DB_PASSWORD', 'your_password');
+define('DB_HOST', 'localhost');
+define('DB_CHARSET', 'utf8mb4');
+``
+then we relaunch our server the wordpress will automatically give access to us 
