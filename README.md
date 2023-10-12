@@ -112,3 +112,5 @@ you liked it , it feels easy ? now try to do it in ascript and put it in a .sql 
 you did it ? good job ! 
 
 now let's make it more automatised with a bash script , you have to make a bash script that enter the sql script into mariadb 
+
+# WordPress + php-fpm container
