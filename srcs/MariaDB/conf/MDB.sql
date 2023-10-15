@@ -1,0 +1,19 @@
+FLUSH PRIVILEGES;
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'khalid1999';
+
+
+DROP DATABASE IF EXISTS test;
+DELETE FROM mysql.db WHERE db='test';
+
+FLUSH PRIVILEGES;
+
+CREATE DATABASE IF NOT EXISTS ksalka;
+
+USE ksalka;
+
+CREATE TABLE IF NOT EXISTS ksalka(
+    lvl INT
+);
+
+INSERT INTO ksalka(lvl)
+VALUES (5);
