@@ -115,6 +115,7 @@ now let's make it more automatised with a bash script , you have to make a bash 
 
 # WordPress + php-fpm container
 **Wordpress** is a content management system that allows you to host and build websites.
+
 **php-fpm** is a primary php FastCGI (the interface that interacte programs with a web server) its very useful for heavy-loaded websites
 
 we will try to lunch our wordpress page without using a webserver , first we will install php-fpm with ``sudo apt-get install php-fpm`` 
