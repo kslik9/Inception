@@ -115,7 +115,7 @@ now let's make it more automatised with a bash script , you have to make a bash 
 
 # WordPress + php-fpm container
 **Wordpress** is a content management system that allows you to host and build websites.
-**php-fpm** is a primary php FastCGI (the interface that interacte programs with a web server) its evry useful for heavy-loaded websites
+**php-fpm** is a primary php FastCGI (the interface that interacte programs with a web server) its very useful for heavy-loaded websites
 
 we will try to lunch our wordpress page without using a webserver , first we will install php-fpm with ``sudo apt-get install php-fpm`` 
 
@@ -135,3 +135,7 @@ define('DB_HOST', 'localhost');
 define('DB_CHARSET', 'utf8mb4');
 ``
 then we relaunch our server the wordpress will automatically give access to us 
+
+for your own host this configuration its gonna work , but that's not our goal . to make it on a container we should make a bash script that do this for us , and here you need to search for yourself a bit
+
+**php-fpm** : a good [tutorial](https://www.digitalocean.com/community/tutorials/php-fpm-nginx) to help you do this !
