@@ -140,3 +140,10 @@ then we relaunch our server the wordpress will automatically give access to us
 for your own host this configuration its gonna work , but that's not our goal . to make it on a container we should make a bash script that do this for us , and here you need to search for yourself a bit
 
 **php-fpm** : a good [tutorial](https://www.digitalocean.com/community/tutorials/php-fpm-nginx) to help you do this !
+
+# Docker network
+after we establish wordpress and configure it we need to link it with our database , here where docker network come to work. ![1kapx9fwe15vs91ddwm3](https://github.com/kslik9/Inception/assets/115497057/23aeb784-68ff-4eae-9898-92bca4b282a7)
+
+a network created using the bridge network is isolated from the host's network , meaning that the containers have their own network stack and IP address space.
+
+first we will start with explaiing bridge driver , it can be used to create an internal network withing a single docker host 
