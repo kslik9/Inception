@@ -147,3 +147,5 @@ after we establish wordpress and configure it we need to link it with our databa
 a network created using the bridge network is isolated from the host's network , meaning that the containers have their own network stack and IP address space.
 
 first we will start with explaiing bridge driver , it can be used to create an internal network withing a single docker host 
+
+i wrote a long guide but it will take too much time , i found this [tutorial](https://dev.to/alubhorta/the-bridge-network-driver-networking-in-docker-6-1ahf) which will help you to make it easy and forward
