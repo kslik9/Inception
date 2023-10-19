@@ -149,3 +149,6 @@ a network created using the bridge network is isolated from the host's network ,
 first we will start with explaiing bridge driver , it can be used to create an internal network withing a single docker host 
 
 i wrote a long guide but it will take too much time , i found this [tutorial](https://dev.to/alubhorta/the-bridge-network-driver-networking-in-docker-6-1ahf) which will help you to make it easy and forward
+
+# Docker volumes
+After a docker container is stopped all the changes inside it is lost, and to resolve this problem docker volumes are here to help, every container is contains a lot of layers , the first ones are for teh image layers and at the top of them the container layer which you can write and read from , but when the container is stopped the container layer is removed, here where the docker volume comes to work and sync with the container's layer and save all the new writed data
