@@ -152,3 +152,5 @@ i wrote a long guide but it will take too much time , i found this [tutorial](ht
 
 # Docker volumes
 After a docker container is stopped all the changes inside it is lost, and to resolve this problem docker volumes are here to help, every container is contains a lot of layers , the first ones are for teh image layers and at the top of them the container layer which you can write and read from , but when the container is stopped the container layer is removed, here where the docker volume comes to work and sync with the container's layer and save all the new writed data
+![layers](https://github.com/kslik9/Inception/assets/115497057/159e8ad5-557d-4449-a880-15d2c4cf863b)
+
