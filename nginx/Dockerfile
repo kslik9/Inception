@@ -1,0 +1,15 @@
+FROM debian:bookworm
+
+RUN apt-get update && \
+    apt-get install -y nginx openssl
+
+
+RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt -subj "/CN=localhost"
+
+COPY ./conf/ssl.conf /etc/nginx/conf.d/ssl.conf
+# COPY ./conf/index.html /var/www/html/wordpress/index.html
+
+EXPOSE 443
+
+
+CMD ["nginx", "-g", "daemon off;"]

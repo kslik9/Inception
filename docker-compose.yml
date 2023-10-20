@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  mariadb:
+    build: ./MariaDB
+    container_name: mariadb_container
+    expose: 
+      - "3306"
+    networks: 
+      - khalidnet
+    volumes:
+      - mysql_volume:/var/lib/mysql
+
+  wordpress:
+    build: ./wordpress
+    container_name: wordpress_container
+    depends_on:
+      - mariadb
+    expose:
+      - "9000"
+    environment:
+      - WORDPRESS_DB_USER=kslik
+      - WORDPRESS_DB_PASSWORD=Khalid2002
+      - WORDPRESS_DB_NAME=ksalka
+    volumes:
+      - mywp_vol:/var/www/html/wordpress
+    networks:
+      - khalidnet
+
+  nginx:
+    build: ./nginx
+    container_name: nginx_container
+    networks:
+      - khalidnet
+    volumes:
+      - mywp_vol:/var/www/html/wordpress
+    depends_on:
+      - wordpress
+    ports:
+      - "443:443"
+    
+  
+
+volumes:
+  mysql_volume:
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/kslik/Desktop/srcs/data/mysql
+  mywp_vol:
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/kslik/Desktop/srcs/data/wp
+
+networks:
+  khalidnet:
+    driver: bridge
