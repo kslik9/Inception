@@ -152,5 +152,9 @@ i wrote a long guide but it will take too much time , i found this [tutorial](ht
 
 # Docker volumes
 After a docker container is stopped all the changes inside it is lost, and to resolve this problem docker volumes are here to help, every container is contains a lot of layers , the first ones are for teh image layers and at the top of them the container layer which you can write and read from , but when the container is stopped the container layer is removed, here where the docker volume comes to work and sync with the container's layer and save all the new writed data
+
 ![layers](https://github.com/kslik9/Inception/assets/115497057/159e8ad5-557d-4449-a880-15d2c4cf863b)
+
+# Docker compose
+using several different containers to manage a project become too slow because you have to build run and connect every container , it's like compiling a big project with several and multiple files *.c and you have to write gcc and all the files every time you wanna compile , sound exhausting isn't?. here it comes docker compose, it works like a makefile . a .YAML file that helps you to build all the conatiners and run them with only a click , and stop and kill with one button . that's a short overview for it , [here](https://www.baeldung.com/ops/docker-compose) you will find a tutorial with everything related to it it helps , and i suggest you search for it a loot it's fun and very helpful 
 
