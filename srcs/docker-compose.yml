@@ -2,42 +2,48 @@ version: '3.8'
 
 services:
   mariadb:
-    build: ./MariaDB
-    container_name: mariadb_container
+    build: ./requirements/MariaDB
+    container_name: mariadb
     expose: 
       - "3306"
+    env_file:
+      - .env
     networks: 
       - khalidnet
     volumes:
       - mysql_volume:/var/lib/mysql
+    restart: always
+   
+      
 
   wordpress:
-    build: ./wordpress
-    container_name: wordpress_container
+    build: ./requirements/wordpress
+    container_name: wordpress
     depends_on:
       - mariadb
     expose:
       - "9000"
-    environment:
-      - WORDPRESS_DB_USER=kslik
-      - WORDPRESS_DB_PASSWORD=Khalid2002
-      - WORDPRESS_DB_NAME=ksalka
-    volumes:
-      - mywp_vol:/var/www/html/wordpress
+    env_file:
+      - .env
     networks:
       - khalidnet
+    volumes:
+      - mywp_vol:/var/www/html/wordpress
+    restart: always
+
 
   nginx:
-    build: ./nginx
-    container_name: nginx_container
+    build: ./requirements/nginx
+    container_name: nginx
     networks:
       - khalidnet
-    volumes:
-      - mywp_vol:/var/www/html/wordpress
     depends_on:
       - wordpress
     ports:
       - "443:443"
+    volumes:
+      - mywp_vol:/var/www/html/wordpress
+    restart: always
     
   
 
@@ -46,12 +52,12 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: /home/kslik/Desktop/srcs/data/mysql
+      device: /home/${USER}/data/mysql
   mywp_vol:
     driver_opts:
       type: none
       o: bind
-      device: /home/kslik/Desktop/srcs/data/wp
+      device: /home/${USER}/data/wp
 
 networks:
   khalidnet:
