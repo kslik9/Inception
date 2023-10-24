@@ -158,3 +158,7 @@ After a docker container is stopped all the changes inside it is lost, and to re
 # Docker compose
 using several different containers to manage a project become too slow because you have to build run and connect every container , it's like compiling a big project with several and multiple files *.c and you have to write gcc and all the files every time you wanna compile , sound exhausting isn't?. here it comes docker compose, it works like a makefile . a .YAML file that helps you to build all the conatiners and run them with only a click , and stop and kill with one button . that's a short overview for it , [here](https://www.baeldung.com/ops/docker-compose) you will find a tutorial with everything related to it it helps , and i suggest you search for it a loot it's fun and very helpful 
 
+# Conclusion
+docker is a beautiful and fun tool that help you to become unbeatable , it's hard to learn it with theorical courses , in the other hand just making a small program and practice , face problems and find solution for it will make you stronger and much better on it ! , in the end i hope you found it fun and helpful 
+
+**made with love for you 💕**
