@@ -3,6 +3,7 @@ version: '3.8'
 services:
   mariadb:
     build: ./requirements/MariaDB
+    image: mariadb
     container_name: mariadb
     expose: 
       - "3306"
@@ -18,6 +19,7 @@ services:
 
   wordpress:
     build: ./requirements/wordpress
+    image: wordpress
     container_name: wordpress
     depends_on:
       - mariadb
@@ -34,6 +36,7 @@ services:
 
   nginx:
     build: ./requirements/nginx
+    image: nginx
     container_name: nginx
     networks:
       - khalidnet
